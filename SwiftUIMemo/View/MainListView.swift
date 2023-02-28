@@ -11,11 +11,24 @@ struct MainListView: View {
     
     @EnvironmentObject var store: MemoStore
     
+    @State private var showComposer: Bool = false
+    
+    
     var body: some View {
         NavigationView {
             List(store.list) {
                 memo in MemoCell(memo: memo)
             }.navigationTitle("내 메모").listStyle(.plain)
+                .toolbar{
+                    Button {
+                        showComposer = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+                .sheet(isPresented: $showComposer) {
+                    ComposerView()
+                }
         }
     }
 }

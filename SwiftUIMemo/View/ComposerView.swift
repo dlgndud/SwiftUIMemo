@@ -20,29 +20,28 @@ struct ComposerView: View {
             VStack {
                 // 2way binding
                 TextEditor(text: $content).padding()
-            }
-        }
-        .navigationTitle("새 메모")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-                ToolbarItemGroup(placement: .navigationBarLeading) {
-                    Button {
-                        dismiss()
-                    } label: {
-                        Text("취소")
+            }.navigationTitle("새 메모").navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarLeading) {
+                            Button {
+                                dismiss()
+                            } label: {
+                                Text("취소")
+                            }
+                        }
+
+                    ToolbarItemGroup(placement:.navigationBarTrailing) {
+                        Button {
+                            store.insert(memo: content)
+                            dismiss()
+                        } label: {
+                            Text("저장")
+                        }
                     }
                 }
-            
-            ToolbarItemGroup(placement: .navigationBarTrailing) {
-                Button {
-                    store.insert(memo: content)
-                    dismiss()
-                } label: {
-                    Text("저장")
-                }
-            }
-            }
+        }
     }
+
 }
 
 struct ComposerView_Previews: PreviewProvider {
