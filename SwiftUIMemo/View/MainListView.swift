@@ -16,17 +16,20 @@ struct MainListView: View {
     
     var body: some View {
         NavigationView {
-            List(store.list) {
-                memo in
-                NavigationLink {
-                    DetailView(memo: memo)
-                } label: {
-                    MemoCell(memo: memo)
+            List {
+                ForEach(store.list) {
+                    memo in
+                    NavigationLink {
+                        DetailView(memo: memo)
+                    } label: {
+                        MemoCell(memo: memo)
+                    }
                 }
-
-                
-            }.navigationTitle("내 메모").listStyle(.plain)
-                .toolbar{
+                .onDelete(perform: store.delete)
+            }
+            .navigationTitle("내 메모")
+            .listStyle(.plain)
+            .toolbar{
                     Button {
                         showComposer = true
                     } label: {
@@ -35,8 +38,9 @@ struct MainListView: View {
                 }
                 .sheet(isPresented: $showComposer) {
                     ComposerView()
-                }
+            }
         }
+        .navigationViewStyle(.stack) // 강의 영상에서 빠진 부분을 추가로 구현함
     }
 }
 
