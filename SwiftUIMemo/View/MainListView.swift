@@ -17,7 +17,14 @@ struct MainListView: View {
     var body: some View {
         NavigationView {
             List(store.list) {
-                memo in MemoCell(memo: memo)
+                memo in
+                NavigationLink {
+                    DetailView(memo: memo)
+                } label: {
+                    MemoCell(memo: memo)
+                }
+
+                
             }.navigationTitle("내 메모").listStyle(.plain)
                 .toolbar{
                     Button {
@@ -39,5 +46,3 @@ struct MainListView_Previews: PreviewProvider {
             .environmentObject(MemoStore())
     }
 }
-
-

@@ -17,6 +17,7 @@
 		D22192BE29AE281E00634B0C /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22192BD29AE281E00634B0C /* MemoStore.swift */; };
 		D22192C129AE2CC100634B0C /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22192C029AE2CC100634B0C /* MemoCell.swift */; };
 		D22192C329AE2D7500634B0C /* ComposerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22192C229AE2D7500634B0C /* ComposerView.swift */; };
+		D2B5491E29AF7A18003E1A00 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B5491D29AF7A18003E1A00 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D22192BD29AE281E00634B0C /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
 		D22192C029AE2CC100634B0C /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		D22192C229AE2D7500634B0C /* ComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposerView.swift; sourceTree = "<group>"; };
+		D2B5491D29AF7A18003E1A00 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				D22192C029AE2CC100634B0C /* MemoCell.swift */,
 				D22192B729AE271200634B0C /* MainListView.swift */,
 				D22192C229AE2D7500634B0C /* ComposerView.swift */,
+				D2B5491D29AF7A18003E1A00 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D22192C329AE2D7500634B0C /* ComposerView.swift in Sources */,
+				D2B5491E29AF7A18003E1A00 /* DetailView.swift in Sources */,
 				D22192C129AE2CC100634B0C /* MemoCell.swift in Sources */,
 				D22192A929AE26C300634B0C /* SwiftUIMemo.xcdatamodeld in Sources */,
 				D22192BE29AE281E00634B0C /* MemoStore.swift in Sources */,
